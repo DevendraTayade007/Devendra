@@ -1,0 +1,28 @@
+<html >
+<head>
+<title>Banner Ads</title>
+<script>
+Banners = new Array('google_logo-667x400.webp','6619095-middle.webp','14-142095_hinduism-symbol-png-transparent-png.webp');
+CurrentBanner = 0;
+function DisplayBanners() 
+{
+if (CurrentBanner < Banners.length - 1);
+{
+CurrentBanner++;
+if (CurrentBanner == Banners.length) 
+{
+CurrentBanner = 0;
+}
+document.RotateBanner.src= Banners[CurrentBanner];
+setTimeout("DisplayBanners()",1000);
+}
+}
+</script>
+</head>
+<body onload="DisplayBanners()" >
+<center>
+<img src="1.jpg" width="400"
+height="75" name="RotateBanner" />
+</center>
+</body>
+</html>
